@@ -12,28 +12,34 @@ body{
     background-repeat: repeat-y;
     overflow-x: hidden;
 }
-h1{
-    margin: 0 0 70px 600px;
-    width: fit-content;
-    text-align: center; 
-    padding: 20px;
+.h1cont{
+    margin: 0 auto;
+    margin-bottom: 70px;
+    /* margin: 0 0 70px 38vmax; */
     border-left: 6px solid black;
     border-right: 6px solid black;
     border-bottom: 6px solid black;
+    width: fit-content;
+}
+.h1cont h1{
+    text-align: center; 
+    padding: 20px;
     background-image: radial-gradient(rebeccapurple, rgb(80, 64, 96));
     transition: all 0.3s;
 }
-h1:hover{
+.h1cont:hover{
     transform: scale(1.1);
     user-select: none;
     cursor: pointer;
     background-image: radial-gradient( rgb(80, 64, 96), rebeccapurple);
 }
 
-div{
-    height: 500px;
-    width: 1000px;  
-    margin-left: 250px;
+.hidden{
+    font-size: 3vmax;
+    height: 33vmax;
+    width: 66vmax;  
+    line-height: 5vmax;
+    margin-left: 17vmax;
     border: 5px black solid;
     background-color: rebeccapurple;
     text-align: center;
@@ -41,8 +47,6 @@ div{
     position: absolute;
     color: black ;
     font-weight: bolder;
-    line-height: 5rem;
-    font-size: xx-large;
 }
 
 
@@ -68,10 +72,12 @@ div{
 }
 @keyframes appearex{
     from{
-        bottom: -70%;
+        /* bottom: -70%; */
+        transform: translateY(100vmax);
     }
     to{
-        bottom: 3%;
+        transform: translateY(0);
+        /* bottom: 3%; */
     }
 }
 @keyframes appearexrev{
@@ -138,27 +144,86 @@ button{
 button:hover{
     transform: scale(1.07);
 }
-ul{
-    list-style-type: none;
-    background-color: blueviolet;
-    width: fit-content;
-    margin-bottom: 200px;
-}
-
 #hidden-section{
     display: none;
     font-size: 25px;
     color: rgb(43, 40, 40);
 }
-
-li{
+.istul{
+    list-style-type: none;
+    background-color: blueviolet;
+    width: 100vmax;
+    margin-bottom: 200px;
+}
+.istul li{
     display: inline-flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    font-size: 1.5vmax;
+}
+
+.istul li a {
+    padding: 2vmax 1.56vmax;
+    color: black;
+    /* padding: 22px 21.5px; */
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.istul li a:hover{
+    background-color: blue;
+    color: whitesmoke;
+}
+
+.vnbb{
+    display: none;
+}
+.ddb{
+    font-size: 1.5vmax;
+    color: black;
+    padding: 2vmax 1.56vmax;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.ddb:hover{
+    background-color: blue;
+    color: whitesmoke;
+} 
+
+.vnbb{
+    display: none;
+    position: absolute;
+    margin-top: 45px;
+    z-index: 1;
+}
+
+.vnbb li a {
+    color: black;
+    padding: 12px auto;
+    text-decoration: none;
+    display: block;
+    text-align: center; 
+    background-color: blueviolet; 
+    transition: all 0.3s;
+}
+
+.vnbb li a:hover {
+    color: white;
+    background-color: blue;
+    }
+/* .ddb:hover{
+    background-color: blue;
+    color: whitesmoke;
+}   */
+
+/* li{
+    display: inline-flex;
+    flex-wrap: nowrap;
 
 }
 
 li a {
-    font-size: x-large;
+    font-size: 1.56vmax;
     color: black;
     padding: 22px 21.5px;
     text-decoration: none;
@@ -193,7 +258,7 @@ li a:hover{
     }
 
 .ddb{
-    font-size: x-large;
+    font-size: 1.56vmax;
     color: black;
     padding: 22px 20px;
     text-decoration: none;
@@ -204,7 +269,7 @@ li a:hover{
 .ddb:hover{
     background-color: blue;
     color: whitesmoke;
-}
+} */
 
 img {
     margin: 140px 0 140px 20px ;
@@ -218,7 +283,7 @@ img,p{
 
 p{
     padding-left: 10px;
-    font-size: xx-large;      
+    font-size: 2vmax;      
     filter: brightness(200%);
     font-family: 'Courier New', Courier, monospace;
 }
