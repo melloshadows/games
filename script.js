@@ -29,18 +29,28 @@ function preload(callback){
         if (loadedimages === images.length)
             callback();
     }
-    images.forEach(url => {
+
+    for(let i = 0 ; i < images.length ; i++){
         let img = new Image();
         img.onload = () => {
             loadedimages++;
             updateLoadingBar();
             canPlayFiles();
         };
-        img.onerror = () => {
-            console.error(`Error loading image: ${url}`);
-        };
-        img.src = url;
-    });
+        img.src = images[i];
+    }
+    // images.forEach(url => {
+    //     let img = new Image();
+    //     img.onload = () => {
+    //         loadedimages++;
+    //         updateLoadingBar();
+    //         canPlayFiles();
+    //     };
+    //     img.onerror = () => {
+    //         console.error(`Error loading image: ${url}`);
+    //     };
+    //     img.src = url;
+    // });
 }
 
 preload(() => {
