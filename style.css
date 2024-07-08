@@ -10,7 +10,7 @@ body{
     background-image: url("imgs/bgg3.jpg");
     background-repeat: repeat-y;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y:hidden;
 }
 .h1cont{
     margin: 0 auto;

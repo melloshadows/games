@@ -45,6 +45,7 @@ function preload(callback){
 
 preload(() => {
     loadingPage.style.display = "none" 
+    document.body.style.overflowY = "visible"
 })
     
 h1.addEventListener("mouseover", function(){
