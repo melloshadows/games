@@ -33,12 +33,26 @@ body{
     cursor: pointer;
     background-image: radial-gradient( rgb(80, 64, 96), rebeccapurple);
 }
-.loading{
+
+#loading {
     width: 100vw;
     height: 100vh;
+    display: block;
+    font-size: 5vmax;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: burlywood;
+    position: relative;
+    z-index: 1;
     background-image: url("imgs/bgg3.jpg");
     background-size: cover;
-    z-index: 5;
+    background-repeat: no-repeat;
+    background-position: 30%;
+    padding: 0;
+    border-radius: 40px;
+    text-align: center;
+    text-shadow: 4px 4px 4px black;
+    animation: loading 0.7s infinite alternate ease-in-out;
+  
 }
 #loadingBar {
     display: flex;

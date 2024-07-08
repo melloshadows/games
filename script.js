@@ -9,7 +9,7 @@ let navigation = document.querySelector("nav")
 let btn = document.querySelector("button")
 let hide = document.querySelectorAll(".hidden")
 let p = document.querySelector(".p")
-let loadingPage = document.querySelector(".loading")
+let loadingPage = document.querySelector("#loading")
 let loadingBarFill = document.querySelector("#loadingBarFill")
 let loadingRatio = document.querySelector("#loadingRatio")
 
