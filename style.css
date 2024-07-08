@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 html{
     scroll-behavior: smooth;
@@ -11,6 +10,7 @@ body{
     background-image: url("imgs/bgg3.jpg");
     background-repeat: repeat-y;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 .h1cont{
     margin: 0 auto;
@@ -33,8 +33,45 @@ body{
     cursor: pointer;
     background-image: radial-gradient( rgb(80, 64, 96), rebeccapurple);
 }
-
+.loading{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("imgs/bgg3.jpg");
+    background-size: cover;
+    z-index: 5;
+}
+#loadingBar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    bottom: 5%;
+    left: 5%;
+    border: 4px double burlywood;
+    border-radius: 40px;
+    width: 90%;
+    overflow: hidden;
+    height: 5%;
+}
+#loadingBarFill {
+    display: block;
+    transition: width 0.5s linear;
+    z-index: -1;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(212, 201, 185), burlywood);
+}
+#loadingRatio {
+    display: inline-block;
+    font-size: 2vmax;
+    left: 47%;
+    text-align: center;
+    position: absolute;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
 .hidden{
+    position: absolute;
     font-size: 3vmax;
     height: 33vmax;
     width: 66vmax;  
@@ -44,7 +81,6 @@ body{
     background-color: rebeccapurple;
     text-align: center;
     display: none; 
-    position: absolute;
     color: black ;
     font-weight: bolder;
 }
@@ -72,22 +108,37 @@ body{
 }
 @keyframes appearex{
     from{
-        /* bottom: -70%; */
         transform: translateY(100vmax);
-    }
-    to{
-        transform: translateY(0);
-        /* bottom: 3%; */
-    }
+        -webkit-transform: translateY(100vmax);
+        -moz-transform: translateY(100vmax);
+        -ms-transform: translateY(100vmax);
+        -o-transform: translateY(100vmax);
 }
+    to{
+        transform: translateY(3vmax);
+        -webkit-transform: translateY(3vmax);
+        -moz-transform: translateY(3vmax);
+        -ms-transform: translateY(3vmax);
+        -o-transform: translateY(3vmax);
+}
+}
+
 @keyframes appearexrev{
     from{
-        bottom: 3% ;
-    }
+        transform: translateY(3vmax);
+        -webkit-transform: translateY(3vmax);
+        -moz-transform: translateY(3vmax);
+        -ms-transform: translateY(3vmax);
+        -o-transform: translateY(3vmax);
+}
     to{
-        bottom:-100%;
+        transform: translateY(100vmax);
         display: none;
-    }
+        -webkit-transform: translateY(100vmax);
+        -moz-transform: translateY(100vmax);
+        -ms-transform: translateY(100vmax);
+        -o-transform: translateY(100vmax);
+}
 }
 @keyframes buton{
     from{
@@ -194,7 +245,7 @@ button:hover{
     display: none;
     position: absolute;
     margin-top: 45px;
-    z-index: 1;
+    z-index: 3;
 }
 
 .vnbb li a {
@@ -210,7 +261,7 @@ button:hover{
 .vnbb li a:hover {
     color: white;
     background-color: blue;
-    }
+}
 /* .ddb:hover{
     background-color: blue;
     color: whitesmoke;
@@ -293,7 +344,6 @@ figure a{
     text-decoration: none;
     color: rgb(112, 83, 25);
 }
-
 
 figure a:hover img{
     transform: scale(1.07);
@@ -540,7 +590,7 @@ a:hover p {
     max-width: 300px;
     max-height: 300px;
 }
-.top{
+/* .top{
     position: fixed;
     top: 95%;
     left: 93.6%;
@@ -548,7 +598,6 @@ a:hover p {
     border: 1px solid black;
     background-color: rgb(75, 83, 110, 0.5);
     padding: 5px;
-    /* padding-right: 30px; */
     border-radius: 10px;
     font-size: larger;
     color: blue;
@@ -556,4 +605,4 @@ a:hover p {
 }
 .top:hover{
     background-color: rgb(75, 83, 110, 0.3);
-}
+} */
